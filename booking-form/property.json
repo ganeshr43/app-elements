@@ -1,0 +1,30 @@
+{
+    "name": "Booking Form",
+    "properties": [
+        {
+            "name": "Properties",
+            "fields": {
+                "action": {
+                    "name": "action",
+                    "type": "string",
+                    "value": "https://test.payu.in/_payment"
+                },
+                "method": {
+                    "name": "method",
+                    "type": "string",
+                    "value": "POST"
+                },
+                "primaryHeading": {
+                    "name": "primaryHeading",
+                    "type": "string",
+                    "value": "Trip Details"
+                },
+                "secondaryHeading": {
+                    "name": "secondaryHeading",
+                    "type": "string",
+                    "value": "User Details"
+                }
+            }
+        }
+    ]
+}

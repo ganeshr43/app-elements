@@ -1,0 +1,55 @@
+{
+    
+    "brandColor": "#0055CC",
+    "siteName": "Udchalo elements",
+    "showBuildStatus": false,
+    "absoluteBaseurl": "https://udchalo.github.io/app-elements/",
+    "footerText": "Udchalo elements",
+    "elements": [
+{
+        "name": "hotel-item",
+        "category": "CustomEements",
+        "displayName": "Hotel Item",
+        "install": "udchalo/item",
+        "githubUrl": "https://github.com/udchalo/item"
+    },
+{
+
+    "name" : "booking-form",
+    "category" : "CustomEements",
+    "displayName" : "Booking Form",
+    "install" : "udchalo/booking-form",
+    "githubUrl" : "https://github.com/udchalo/booking-form"
+},
+{
+
+    "name" : "md-convert",
+    "category" : "CustomEements",
+    "displayName" : "Md Convert",
+    "install" : "udchalo/md-convert",
+    "githubUrl" : "https://github.com/udchalo/md-convert"
+},
+
+{
+
+    "name" : "location-map",
+    "category" : "GoogleElements",
+    "displayName" : "Location Map",
+    "install" : "udchalo/location-map",
+    "githubUrl" : "https://github.com/udchalo/location-map"
+}
+
+
+],
+    "categories": [{
+        "name": "CustomEements",
+        "displayName": "Custom Eements"
+    },
+    {
+        "name": "GoogleElements",
+        "displayName": "Google Elements"
+    }, {
+        "name": "data",
+        "displayName": "Data"
+    }]
+}
