@@ -1,0 +1,37 @@
+{
+  "name": "highlightjs-element",
+  "authors": [
+    "Ajinkya Tejankar <tejankarajinkya@gmail.com>"
+  ],
+  "description": "Provides syntax coloring for code using highlightjs library",
+  "main": "highlightjs-element.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "https://github.com/atomproject/highlightjs-element",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "highlightjs": "^9.1.0",
+    "polymer": "^1.3.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "^0.7.14",
+    "web-component-tester": "*",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.6"
+  },
+  "version": "1.0.1",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "53dc612a6805cb9e4c8cec44d814717dc6b3fe80"
+  },
+  "_source": "https://github.com/atomproject/highlightjs-element.git",
+  "_target": "^1.0.0",
+  "_originalSource": "atomproject/highlightjs-element"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Md Convert",
+    "properties": [
+        {
+            "name": "Properties",
+            "fields": {
+                "githubURL": {
+                    "name": "githubURL",
+                    "type": "string",
+                    "value": "https://github.com/udchalo/Hotel-Deals/blob/master/CasaDeGoa.md"
+                },
+                "public": {
+                    "name": "public",
+                    "type": "boolean",
+                    "value": true
+                }
+            }
+        }
+    ]
+}

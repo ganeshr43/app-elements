@@ -1,0 +1,36 @@
+{
+  "name": "code-generator-behavior",
+  "authors": [
+    "Ajinkya Tejankar <tejankarajinkya@gmail.com>"
+  ],
+  "description": "Generate html code for an element",
+  "main": "code-generator-behavior.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "https://github.com/atomproject/code-generator-behavior",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.2.4",
+    "js-beautify": "beautify-web/js-beautify#^1.5.10"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.6"
+  },
+  "version": "1.1.0",
+  "_release": "1.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.0",
+    "commit": "2d33a7d2734c01907929bec37bb0a8827591ca08"
+  },
+  "_source": "https://github.com/atomproject/code-generator-behavior.git",
+  "_target": "^1.0.0",
+  "_originalSource": "atomproject/code-generator-behavior"
+}

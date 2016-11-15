@@ -1,0 +1,131 @@
+
+<link rel="import" href="../polymer/polymer.html">
+
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.gh-readme.full.js"></script>
+
+<dom-module id="md-convert">
+
+  <template>
+<!---
+ <div id="preview" ownerName$="{{ownerName}}"  repoName$="{{repoName}}" fileName$="{{fileName}}" public$="{{public}}"> </div>
+ -->
+	  
+	  <div id="preview" githubURL$="{{githubURL}}" public$="{{public}}"></div>
+	  
+  </template>
+</dom-module>
+  <script>
+	   document.addEventListener('HTMLImportsLoaded', function() {
+  Polymer({
+    is: 'md-convert',
+    properties: {
+      public:{
+        type: Boolean,
+        value:true,
+        reflectToAttribute:true
+      },
+      githubURL:{
+      type:String,
+      value:'https://github.com/udchalo/Hotel-Deals/blob/master/CasaDeGoa.md',
+      reflectToAttribute : true
+      }
+    
+    },
+	  
+	     ready: function() {
+ 
+
+var githubfileUrl = this.githubURL;
+
+
+var allOptions = githubfileUrl.split("/");
+
+
+
+        var options = {
+          owner: allOptions[3],
+          repo: allOptions[4],
+          filename: allOptions[7]
+        };
+     
+        $('#preview').readme(options);
+     
+            }
+	   
+  });
+	   });
+  
+	
+ (function ($) {
+
+  var b64array = "ABCDEFGHIJKLMNOP" +
+           "QRSTUVWXYZabcdef" +
+           "ghijklmnopqrstuv" +
+           "wxyz0123456789+/" +
+           "=";
+
+  function decodeBase64(data) {
+    // from http://decodebase64.com/
+    var output = "";
+    var hex = "";
+    var chr1, chr2, chr3 = "";
+    var enc1, enc2, enc3, enc4 = "";
+    var i = 0;
+
+    data = data.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+    do {
+      enc1 = b64array.indexOf(data.charAt(i++));
+      enc2 = b64array.indexOf(data.charAt(i++));
+      enc3 = b64array.indexOf(data.charAt(i++));
+      enc4 = b64array.indexOf(data.charAt(i++));
+
+      chr1 = (enc1 << 2) | (enc2 >> 4);
+      chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+      chr3 = ((enc3 & 3) << 6) | enc4;
+
+      output = output + String.fromCharCode(chr1);
+
+      if (enc3 != 64) {
+        output = output + String.fromCharCode(chr2);
+      }
+      if (enc4 != 64) {
+        output = output + String.fromCharCode(chr3);
+      }
+
+      chr1 = chr2 = chr3 = "";
+      enc1 = enc2 = enc3 = enc4 = "";
+
+    } while (i < data.length);
+
+    return output;
+  }
+
+  function convertMarkdown(markdownToConvert) {
+    return marked(markdownToConvert);
+  }
+
+  $.fn.readme = function (options) {
+    var deferred = new $.Deferred();
+    var self = this;
+    var owner = options.owner;
+    var repo = options.repo;
+    var filename = options.filename;
+    console.log(owner + repo + filename);
+    $.get('https://api.github.com/repos/' + owner + '/' + repo + '/contents/'+ filename, function (response) {
+      var markdownToConvert = decodeBase64(response.content);
+      var html = convertMarkdown(markdownToConvert);
+      $(self.selector).html(html);
+      console.log(self.selector);
+      console.log(html);
+      deferred.resolve();
+    });
+    return deferred.promise();
+    console.log(deferred.promise());
+  };
+
+})(jQuery);
+ 
+  </script>

@@ -1,0 +1,147 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-spinner/paper-spinner-lite.html">
+<link rel="import" href="../iron-form/iron-form.html">
+
+<link rel="import" href="../t-stepper/t-stepper.html">
+<link rel="import" href="../t-calendar/t-calendar.html">
+<link rel="import" href="../t-section-header/t-section-header.html">
+<link rel="import" href="../t-shared-components/theme.html">
+
+<dom-module id="booking-form">
+
+  <template>
+<style>
+  
+
+
+.terms, #eventsDemoSubmit, t-stepper, t-calendar, paper-input{
+  margin-top: 25px;
+}
+
+t-section-header{
+
+  margin-top: 60px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+padding: 10px;
+
+}
+paper-spinner-lite{
+
+ --paper-spinner-color: var(--paper-white);
+}
+
+ paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+
+
+
+</style>
+
+<form method$="{{method}}" action$="{{action}}" id="form"   name="payUForm">
+
+<t-section-header label$="{{primaryHeading}}"></t-section-header>
+
+<t-stepper singular-label="Adult" plural-label="Adults" secondary-label="(>12 years)"
+    max="100" count="0" ico="icons:face" has-icon></t-stepper>
+
+    <t-stepper singular-label="Children" plural-label="Children" secondary-label="(<12 years)"
+    max="100" count="0" ico="icons:face" has-icon></t-stepper>
+
+    <t-calendar  label="Check-In Date" id="checkIn"></t-calendar>
+
+     <t-calendar  label="Check-Out Date" id="checkOut"></t-calendar>
+
+     <t-section-header label$="{{secondaryHeading}}"></t-section-header>
+
+  <paper-input name="firstName" label="First Name" required auto-validate id="firstName"></paper-input>
+
+    <paper-input name="lastName" label="Last Name" required auto-validate id="lastName"></paper-input>
+ <paper-input name="email" label="Email" type="email" required auto-validate id="email"></paper-input>
+  <paper-input name="phoneNumber" label="PhoneNumber" required auto-validate id="phoneNumber"></paper-input>
+  <paper-checkbox name="read" required class="terms">Agree to our Terms!</paper-checkbox><br>
+
+  <paper-button raised class="indigo" onclick="_delayedSubmit(event)" id="eventsDemoSubmit">
+   <paper-spinner-lite id="spinner" hidden></paper-spinner-lite>Book Now</paper-button>
+ 
+ 
+</form>
+</template>
+
+</dom-module>
+<script>
+ document.addEventListener('HTMLImportsLoaded', function() {
+          Polymer({
+            is: "booking-form",
+   properties: {
+
+     method:{
+        type: String,
+        value:'POST',
+        reflectToAttribute : true
+      },
+       action:{
+        type: String,
+        value:'https://test.payu.in/_payment',
+        reflectToAttribute : true
+      },
+     primaryHeading:{
+        type: String,
+        value:'Trip Details',
+        reflectToAttribute : true
+      },
+      secondaryHeading:{
+        type: String,
+        value:'User Details',
+        reflectToAttribute : true
+      },
+      
+      
+      }
+ 
+        
+
+          });
+
+
+
+
+
+        });
+
+
+
+ function _delayedSubmit(event) {
+   
+   //eventsDemoSubmit.disabled = true;
+   
+       
+    spinner.active = true;
+     spinner.hidden = false;
+       
+ event.preventDefault();
+ var form = document.getElementById("form");
+ var firstName = document.getElementById("firstName");
+ var email = document.getElementById("email");
+  var phoneNumber = document.getElementById("phoneNumber");
+          
+         
+ setTimeout(function() {
+       form.submit();
+    }, 1200);
+          
+  };
+
+
+
+</script>

@@ -1,0 +1,44 @@
+{
+  "name": "hotel-item",
+  "authors": [
+    "Ankit Singh <asingh@upcurve.in>"
+  ],
+  "description": "A Holtel list Item",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Polymer",
+    "Hotels",
+    "Web",
+    "Components"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/udchalo/item",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "demo",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "iron-image": "PolymerElements/iron-image#^1.2.5"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "~0.7.14",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.6"
+  },
+  "_release": "84d951cf47",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "84d951cf47bc66554c8566a5f217886708e7f172"
+  },
+  "_source": "https://github.com/udchalo/item.git",
+  "_target": "*",
+  "_originalSource": "udchalo/item",
+  "_direct": true
+}

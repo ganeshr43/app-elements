@@ -1,0 +1,44 @@
+{
+  "name": "booking-form",
+  "version": "0.1.0",
+  "authors": [
+    "Ankit Singh <asingh@upcurve.in>"
+  ],
+  "description": "A Booking form for hotel Booking",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Polymer",
+    "Hotels",
+    "Booking",
+    "Web",
+    "Components"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+   "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "demo",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "paper-input": "PolymerElements/paper-input#^1.1.20",
+    "paper-checkbox":"PolymerElements/paper-checkbox#^1.4.0",
+    "paper-button":"PolymerElements/paper-button#^1.0.14",
+    "paper-spinner":"PolymerElements/paper-spinner#^1.2.0",
+    "iron-form":"PolymerElements/iron-form#^1.1.4",
+    "t-stepper":"atomelements/t-stepper#^1.1.3",
+    "t-calendar":"atomelements/t-calendar#^1.3.0",
+    "t-section-header":"atomelements/t-section-header#^1.0.4",
+    "t-shared-components":"atomelements/t-shared-components#^1.0.0"
+  },
+  "devDependencies": {
+   "webcomponentsjs": "~0.7.14",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.6"
+  }
+}

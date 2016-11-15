@@ -1,0 +1,36 @@
+{
+  "name": "location-map",
+  "version": "0.1.0",
+  "authors": [
+    "Ankit Singh <asingh@upcurve.in>"
+  ],
+  "description": "Modified google map component",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Polymer",
+    "Hotels",
+    "Web",
+    "Components"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+   "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+     "demo",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "google-map": "GoogleWebComponents/google-map#*",
+    "google-apis": "GoogleWebComponents/google-apis#^1.1.1"
+  },
+  "devDependencies": {
+   "webcomponentsjs": "~0.7.14",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.6"
+  }
+}

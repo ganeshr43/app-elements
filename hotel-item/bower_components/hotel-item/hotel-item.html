@@ -1,0 +1,200 @@
+
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-image/iron-image.html">
+
+<dom-module id="hotel-item">
+
+  <template>
+
+    <style>
+
+      :host {
+        @apply(--layout-vertical);
+        
+        position: relative;
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        --paper-icon-button-ink-color: #31f0ef;
+      }
+
+      .pic {
+        width: calc(100%);
+        width: -webkit-calc(100%);
+        width: -moz-calc(100%);
+        height: calc(100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+         height: 17vmax;
+         
+        
+        transition: opacity 0.5s;
+        margin-top: 0px;
+      }
+
+      .link {
+        transition: opacity 0.5s;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 300;
+        -webkit-align-items : left !important;
+        align-items: left !important;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #0a3142;
+      }
+
+
+      .location {
+        transition: opacity 0.5s;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+        -webkit-align-items : left !important;
+            align-items: left !important;
+        text-align: left;
+        margin-left: 20px;
+        color: #0a3142;
+        opacity: 0.6;
+        margin-bottom: 30px;
+      }
+
+      .price {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1em;
+        color: #111;
+        font-weight: bold;
+      }
+
+      .author {
+        font-size: 11px;
+        color: #000;
+        line-height: 5em;
+      }
+
+      .author img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50% 50%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      .icons {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        transition: opacity 0.5s;
+      }
+
+      iron-icon {
+        width: 20px;
+        height: 20px;
+        color: #666;
+        margin: 5px;
+      }
+
+      :host::after {
+        content: "";
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.5s;
+        pointer-events: none;
+        /* create a layer to only invalidate this layer for :hover */
+        transform: translateZ(0);
+      }
+
+      :host:hover::after {
+        opacity: 1;
+      }
+
+
+    @media (max-width: 1200px) {
+ .pic {
+       
+         height: 17vmax;
+         
+      }
+
+
+        }
+
+        @media (max-width: 700px) {
+ .pic {
+       
+         height: 34vmax;
+         
+      }
+
+
+        }
+
+           @media (max-width: 400px) {
+ .pic {
+       
+         height: 34vmax;
+         
+      }
+
+
+        }
+
+    </style>
+
+ 
+
+        <iron-image class="pic" style=" background-color: lightgray;" preload  sizing$="{{sizing}}"  src$="{{imgSrc}}" ></iron-image>
+    <div class="link">{{title}}</div>
+    <div class="location">{{subtitle}}</div>
+  
+
+  </template>
+</dom-module>
+  <script>
+
+  Polymer({
+
+    is: 'hotel-item',
+
+    properties: {
+
+     
+      
+       imgSrc:{
+        type: String,
+         value: 'http://www.pixelstalk.net/wp-content/uploads/2016/10/Beautiful-indonesian-hotel-swimming-pool.jpg',
+         reflectToAttribute : true
+      },
+      
+      title:{
+        type: String,
+        value:'Azzure by Spree Hotels',
+        reflectToAttribute : true
+      },
+      
+      subtitle:{
+        type: String,
+        value:'517 Leexington Avenie, New York, NY 10017',
+        reflectToAttribute : true
+      },
+      
+      
+
+    }
+
+  });
+
+  </script>
+
+

@@ -1,0 +1,34 @@
+{
+  "name": "md-convert",
+  "version": "0.1.0",
+  "authors": [
+    "Ankit Singh <asingh@upcurve.in>"
+  ],
+  "description": "Convert markdown fille to html",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Polymer",
+    "Hotels",
+    "Web",
+    "Components"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+   "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+     "demo",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+   "webcomponentsjs": "~0.7.14",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.6"
+  }
+}
